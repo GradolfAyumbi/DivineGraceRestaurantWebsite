@@ -1,0 +1,20 @@
+/* main.css */
+
+/* Define CSS variables */
+:root {
+    --font-family: 'Arial, sans-serif';
+
+    --p-font-size-small: 12px;
+    --p-font-size-medium: 16px;
+    --p-font-size-large: 24px;
+
+    --h-font-size-small: 30px;
+    --h-font-size-medium: 35px;
+    --h-font-size-large: 40px;
+
+    --black: #000000;
+    --white: #ffffff;
+    --orange: #df733c;
+    --red: #580000;
+    --grey: grey;
+}
