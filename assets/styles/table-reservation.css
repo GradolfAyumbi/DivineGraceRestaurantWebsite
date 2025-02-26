@@ -1,0 +1,248 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* Super Container Styling */
+.super-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 815px;
+    min-height: auto;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(109, 105, 105, 0.2);
+    padding: 0;
+    background-image: url('path/to/your/image.jpg'); /* Add your background image path */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Top Rectangle */
+.rectangle.top-rectangle {
+    width: 100%;
+    height: 65px;
+    background-color: #ccc;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.top-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Bottom Rectangle */
+.rectangle.bottom-rectangle {
+    width: 100%;
+    height: 90px;
+    background-color: #ccc;
+    border-radius: 0 0 8px 8px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    overflow: hidden;
+}
+
+/* Note and Next Button Section */
+.note-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.note {
+    font-size: 18px;
+    color: #777;
+    white-space: normal;
+    overflow: hidden;
+    word-break: break-word;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.next-button {
+    padding: 12px 170px;
+    background-color: #e98d24;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    width: auto;
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    margin-left: auto; /* Moves button to the right corner */
+    border-radius: 8px;
+
+}
+
+.next-button:hover {
+    background-color: #45a049;
+}
+
+/* Modal Container Styling */
+.modal-container {
+    width: 100%;
+    max-width: 430px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Reservation Section */
+.reservation h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Input Wrapper */
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    height: 40px;
+}
+
+.input-wrapper-2 {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    height: 100%;
+}
+
+.icon-box {
+    width: 40px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e0e0e0;
+    border-right: 1px solid #ccc;
+}
+
+.icon-box-2 {
+    width: 40px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e0e0e0;
+    border-right: 1px solid #ccc;
+}
+
+.icon {
+    color: #555;
+    font-size: 1.2rem;
+}
+
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    flex-grow: 1;
+    height: 100%;
+}
+
+select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+}
+
+textarea {
+    resize: vertical;
+    background-color: #f9f9f9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .super-container {
+        width: 90%;
+    }
+
+    .next-button {
+        padding: 12px 15px;
+    }
+
+    .note {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .super-container {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .rectangle.top-rectangle, .rectangle.bottom-rectangle {
+        border-radius: 0;
+    }
+
+    .next-button {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    .note {
+        font-size: 14px;
+    }
+}
