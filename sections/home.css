@@ -8,7 +8,7 @@
 
 /* Navbar */
 .navbar {
-    position: relative;
+    position: fixed;
     margin: 0 auto;
     width: 100%;
     display: flex;
@@ -17,37 +17,35 @@
     padding: 16px;
     font-size: 14px;
     background: #590000;
-    /* background: transparent;
-    transition: background 0.3s ease; */
+    color: white;
+    /* transition: background 0.3s ease; */
+    z-index: 1000;
 }
-
-/* .navbar.scrolled {
-    background: #590000;
-} */
 
 .logo {
     font-size: 20px;
     font-weight: 600;
-    color: white;
     margin-left: 80px;
 }
 
-nav ul {
+/* Desktop Navigation */
+.nav-links ul {
     list-style: none;
     display: flex;
     gap: 20px;
     margin-left: 600px;
 }
 
-nav ul li a {
+.nav-links ul li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
 }
 
+/* Buttons */
 .nav-buttons {
     display: flex;
-    gap: 20px;
+    gap: 10px;
     margin-right: 125px;
     padding: 10px;
 }
@@ -67,4 +65,62 @@ nav ul li a {
 .btn-order {
     background: #E16D2B;
     color: white;
+}
+
+/* Mobile Menu (Hidden by Default) */
+#menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Mobile menu - Hidden by default */
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #590000;
+    width: 100%;
+    text-align: center;
+    padding: 16px;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mobile-menu ul li {
+    padding: 15px;
+}
+
+.mobile-menu ul li a, .mobile-menu ul li button {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .nav-links, .nav-buttons {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    /* Show Mobile Menu when Checkbox is Checked */
+    #menu-toggle:checked ~ .mobile-menu {
+        display: block;
+    }
 }

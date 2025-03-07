@@ -9,18 +9,35 @@
 <body>
     <header class="navbar">
         <div class="logo">Teral</div>
-        <nav>
+        
+        <!-- Mobile Menu Toggle -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">☰</label>
+
+        <!-- Navigation -->
+        <nav class="nav-links">
             <ul>
                 <li><a href="#">MENU</a></li>
                 <li><a href="#">FOOD DELIVERY</a></li>
                 <li><a href="#">CONTACT US</a></li>
             </ul>
         </nav>
+
         <div class="nav-buttons">
             <button class="btn-reserve">Table Reservation</button>
             <button class="btn-order">See MENU & Order</button>
         </div>
-    </header>
 
+        <!-- Mobile Menu -->
+        <nav class="mobile-menu">
+            <ul>
+                <li><a href="#">MENU</a></li>
+                <li><a href="#">FOOD DELIVERY</a></li>
+                <li><a href="#">CONTACT US</a></li>
+                <li><button class="btn-reserve">Table Reservation</button></li>
+                <li><button class="btn-order">See MENU & Order</button></li>
+            </ul>
+        </nav>
+    </header>
 </body>
 </html>
