@@ -1,3 +1,40 @@
 /*THE FOLLOWING CODE BELONGS TO J-B*/
+#jb-container {
+    font-family: var(--font-family);
+}
 
+#jb-dropdown {
+    background-color: var(--grey);
+    height: 40px;
+    transition: background-color 1s;
+    p {
+        font-size: var(--p-font-size-large);
+        font-weight: bold;
+    }
+    img {
+        margin-bottom: 10px;
+    }
+}
+
+#jb-dropdown.jb-bgchange {
+    background-color: var(--black);
+}
+
+#jb-list{
+    display: none;
+    .jb-dish {
+        font-size: var(--p-font-size-medium);
+        border-bottom: 1px solid var(--grey);
+        .jb-picture {
+            width: 57.5px;
+        }
+    }
+}
+
+.jb-info {
+    width: 10px;
+    font-size: var(--p-font-size-medium);
+    flex-direction: column;
+    justify-content: center;
+}
 /*THE CODE BELONGING TO J-B ENDS HERE*/
