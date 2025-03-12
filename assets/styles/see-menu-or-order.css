@@ -10,9 +10,10 @@
 #jb-dropdown {
     font-size: var(--p-font-size-large);
     background: var(--grey);
-    img {
-        transform: rotate(180deg);
-    }
+}
+
+#jb-dropdown img {
+    transform: rotate(180deg);
 }
 
 .jb-item {
@@ -43,9 +44,10 @@
     #jb-dropdown {
         background: none;
         font-size: var(--h-font-size-small);
-        img{
-            display: none;
-        }
+    }
+
+    #jb-dropdown img{
+        display: none;
     }
 }
 /*THE CODE BELONGING TO J-B ENDS HERE*/
