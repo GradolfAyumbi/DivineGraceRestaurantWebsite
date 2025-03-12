@@ -1,40 +1,51 @@
 /*THE FOLLOWING CODE BELONGS TO J-B*/
-#jb-container {
+.body {
     font-family: var(--font-family);
 }
 
+#jb-entrees {
+    cursor: pointer;
+}
+
 #jb-dropdown {
-    background-color: var(--grey);
-    height: 40px;
-    transition: background-color 1s;
-    p {
-        font-size: var(--p-font-size-large);
-        font-weight: bold;
-    }
+    font-size: var(--p-font-size-large);
+    background: var(--grey);
     img {
-        margin-bottom: 10px;
+        transform: rotate(180deg);
     }
 }
 
-#jb-dropdown.jb-bgchange {
-    background-color: var(--black);
+.jb-item {
+    border-top: 1px solid var(--black);
+    border-bottom: 1px solid var(--black);
 }
 
-#jb-list{
-    display: none;
-    .jb-dish {
-        font-size: var(--p-font-size-medium);
-        border-bottom: 1px solid var(--grey);
-        .jb-picture {
-            width: 57.5px;
-        }
-    }
+.jb-dropdown, .jb-item {
+    transition: background .3s;
+}
+
+.jb-item:hover {
+    background: var(--grey);
 }
 
 .jb-info {
-    width: 10px;
-    font-size: var(--p-font-size-medium);
     flex-direction: column;
-    justify-content: center;
+    padding-left: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    #jb-dropdown:active {
+        background: var(--black);
+    } 
+}
+
+@media only screen and (min-width: 768px) {
+    #jb-dropdown {
+        background: none;
+        font-size: var(--h-font-size-small);
+        img{
+            display: none;
+        }
+    }
 }
 /*THE CODE BELONGING TO J-B ENDS HERE*/
