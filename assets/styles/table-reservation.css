@@ -1,4 +1,3 @@
-/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -17,8 +16,7 @@ body {
     min-height: 100vh;
 }
 
-/* Super Container Styling */
-.super-container {
+.Nkwesi-super-container {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -31,13 +29,12 @@ body {
     background-color: #fff;
     box-shadow: 0 0 15px rgba(109, 105, 105, 0.2);
     padding: 0;
-    background-image: url('path/to/your/image.jpg'); /* Add your background image path */
+    background-image: url('path/to/your/image.jpg'); 
     background-size: cover;
     background-position: center;
 }
 
-/* Top Rectangle */
-.rectangle.top-rectangle {
+.Nkwesi-rectangle.Nkwesi-top-rectangle {
     width: 100%;
     height: 65px;
     background-color: #ccc;
@@ -48,14 +45,13 @@ body {
     padding-left: 20px;
 }
 
-.top-text {
+.Nkwesi-top-text {
     font-size: 18px;
     font-weight: bold;
     color: #333;
 }
 
-/* Bottom Rectangle */
-.rectangle.bottom-rectangle {
+.Nkwesi-rectangle.Nkwesi-bottom-rectangle {
     width: 100%;
     height: 90px;
     background-color: #ccc;
@@ -68,29 +64,25 @@ body {
     overflow: hidden;
 }
 
-/* Note and Next Button Section */
-.note-container {
+.Nkwesi-note-container {
     display: flex;
     align-items: center;
     width: 100%;
     justify-content: space-between;
 }
 
-.note {
+.Nkwesi-note {
     font-size: 18px;
     color: #777;
     white-space: normal;
     overflow: hidden;
     word-break: break-word;
     line-height: 1.4;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
     text-align: left;
     flex-grow: 1;
 }
 
-.next-button {
+.Nkwesi-next-button {
     padding: 12px 170px;
     background-color: #e98d24;
     color: white;
@@ -106,17 +98,11 @@ body {
     align-items: center;
     justify-content: center;
     white-space: nowrap;
-    margin-left: auto; /* Moves button to the right corner */
+    margin-left: auto; 
     border-radius: 8px;
-
 }
 
-.next-button:hover {
-    background-color: #45a049;
-}
-
-/* Modal Container Styling */
-.modal-container {
+.Nkwesi-modal-container {
     width: 100%;
     max-width: 430px;
     height: auto;
@@ -131,20 +117,17 @@ body {
     position: relative;
 }
 
-/* Reservation Section */
-.reservation h2 {
+.Nkwesi-reservation h2 {
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 8px;
 }
 
-/* Form Group */
-.form-group {
+.Nkwesi-form-group {
     margin-bottom: 15px;
 }
 
-/* Input Wrapper */
-.input-wrapper {
+.Nkwesi-input-wrapper {
     display: flex;
     align-items: center;
     border: 1px solid #ccc;
@@ -153,7 +136,7 @@ body {
     height: 40px;
 }
 
-.input-wrapper-2 {
+.Nkwesi-input-wrapper-2 {
     display: flex;
     align-items: center;
     border: 1px solid #ccc;
@@ -162,7 +145,7 @@ body {
     height: 100%;
 }
 
-.icon-box {
+.Nkwesi-icon-box {
     width: 40px;
     height: 100%;
     display: flex;
@@ -172,7 +155,7 @@ body {
     border-right: 1px solid #ccc;
 }
 
-.icon-box-2 {
+.Nkwesi-icon-box-2 {
     width: 40px;
     height: 100px;
     display: flex;
@@ -182,7 +165,7 @@ body {
     border-right: 1px solid #ccc;
 }
 
-.icon {
+.Nkwesi-icon {
     color: #555;
     font-size: 1.2rem;
 }
@@ -212,37 +195,70 @@ textarea {
     background-color: #f9f9f9;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
-    .super-container {
+    .Nkwesi-super-container {
         width: 90%;
     }
 
-    .next-button {
+    .Nkwesi-next-button {
         padding: 12px 15px;
     }
 
-    .note {
+    .Nkwesi-note {
         font-size: 16px;
     }
 }
 
 @media (max-width: 480px) {
-    .super-container {
+    .Nkwesi-super-container {
         width: 100%;
         border-radius: 0;
     }
 
-    .rectangle.top-rectangle, .rectangle.bottom-rectangle {
+    .Nkwesi-rectangle.Nkwesi-top-rectangle, .Nkwesi-rectangle.Nkwesi-bottom-rectangle {
         border-radius: 0;
     }
 
-    .next-button {
+    .Nkwesi-next-button {
         padding: 10px 12px;
         font-size: 14px;
     }
 
-    .note {
+    .Nkwesi-note {
         font-size: 14px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
