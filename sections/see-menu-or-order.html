@@ -1,0 +1,303 @@
+<!DOCTYPE html> 
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Grillades</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: transparent;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        .menu-column {
+            width: 48%;
+        }
+        .menu-item {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .menu-item:hover {
+            background-color: #f8f9fa;
+        }
+        .menu-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+        .item-info {
+            flex-grow: 1;
+        }
+        .item-name {
+            font-weight: bold;
+        }
+        .item-price {
+            font-weight: bold;
+            white-space: nowrap;
+        }
+        #details {
+        max-height: 60vh; /* Hauteur réduite pour forcer le défilement */
+        overflow-y: auto; /* Activation du défilement vertical */
+        position: fixed;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: 400px; /* Largeur maximale */
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding-bottom: 15px; /* Évite que le dernier élément soit caché */
+    }
+
+           /* Style pour l'image */
+    #details-img {
+        width: 100%; /* L'image prend toute la largeur */
+        max-height: 180px; /* Hauteur réduite pour éviter qu'elle prenne trop de place */
+        object-fit: cover;
+        display: block;
+        margin: 0 auto 10px auto;
+        border-radius: 5px;
+    }
+
+    /* Ajout d'une barre de défilement plus visible */
+    #details::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    #details::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 4px;
+    }
+
+    #details::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            color: red;
+            font-weight: bold;
+        }
+        .price-container {
+            border: 1px solid yellow;
+            padding: 15px;
+            margin-top: 20px;
+            background: #FFC107;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .menu-column, .details {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2 class="text-center">Grillades</h2>
+
+    <div class="container">
+        <!-- Première colonne -->
+        <div class="menu-column">
+            <div class="menu-item" onclick="toggleDetails('filet-boeuf', 'téléchargement.jpg', 'Brochettes de Filet de boeuf', '100% boeuf', 7500)">
+                <img src="téléchargement.jpg" alt="Brochettes de Filet de boeuf">
+                <div class="item-info">
+                    <div class="item-name">Brochettes de Filet de boeuf</div>
+                    <div>100% boeuf</div>
+                </div>
+                <div class="item-price">7 500 XOF</div>
+            </div>
+
+            <div class="menu-item" onclick="toggleDetails('trio-mix', 'téléchargement (1).jpg', 'Trio grill Mix', '3 brochettes Boeuf, Merguez et Poulet', 8000)">
+                <img src="téléchargement (1).jpg" alt="Trio grill Mix">
+                <div class="item-info">
+                    <div class="item-name">Trio grill Mix</div>
+                    <div>3 brochettes Boeuf, Merguez et Poulet</div>
+                </div>
+                <div class="item-price">8 000 XOF</div>
+            </div>
+
+            <div class="menu-item" onclick="toggleDetails('thiof', 'thiof_poisson.jpg', 'THIOF POISSON', '', 8000)">
+                <img src="thiof poisson.jpg" alt="THIOF POISSON">
+                <div class="item-info">
+                    <div class="item-name">THIOF POISSON</div>
+                </div>
+                <div class="item-price">8 000 XOF</div>
+            </div>
+
+            <div class="menu-item" onclick="toggleDetails('cotelettes','cotelette agneau.jpg', 'CÔTELETTES D’AGNEAU', '', 8500)">
+                <img src="cotelette d'agneau.jpg" alt="CÔTELETTES D’AGNEAU">
+                <div class="item-info">
+                    <div class="item-name">CÔTELETTES D’AGNEAU</div>
+                </div>
+                <div class="item-price">8 500 XOF</div>
+            </div>
+
+            <div class="menu-item" onclick="toggleDetails('filet-boeuf', 'filet-boeuf.jpg', 'Emince de Filet de boeuf', '', 7500)">
+                <img src="filet-boeuf.jpg" alt="Emince de Filet de boeuf">
+                <div class="item-info">
+                    <div class="item-name">Emince de Filet de boeuf</div>
+                </div>
+                <div class="item-price">7 500 XOF</div>
+            </div>
+
+            <div class="menu-item" onclick="toggleDetails('lotte', 'lotte.jpg', 'Brochettes de Lotte', '', 6500)">
+                <img src="lotte.jpg" alt="Brochettes de Lotte">
+                <div class="item-info">
+                    <div class="item-name">Brochettes de Lotte</div>
+                </div>
+                <div class="item-price">6 500 XOF</div>
+            </div>
+        </div>
+
+        <!-- Deuxième colonne -->
+        <div class="menu-column">
+            <div class="menu-item" onclick="toggleDetails('demi-poulet', 'demi_poulet.jpg', 'Demi poulet', '', 6000)">
+                <img src="demi_poulet.jpg" alt="Demi poulet">
+                <div class="item-info">
+                    <div class="item-name">Demi poulet</div>
+                </div>
+                <div class="item-price">6 000 XOF</div>
+            </div>
+
+            <div class="menu-item" onclick="toggleDetails('daurade-grand', 'daurade_grand.jpg', 'Daurade (Grand modèle)', '', 7500)">
+                <img src="daurade_grand.jpg" alt="Daurade (Grand modèle)">
+                <div class="item-info">
+                    <div class="item-name">Daurade (Grand modèle)</div>
+                </div>
+                <div class="item-price">7 500 XOF</div>
+            </div>
+
+            <div class="menu-item" onclick="toggleDetails('poulet-entier', 'poulet_entier.jpg', 'Poulet entier', '', 8500)">
+                <img src="poulet_entier.jpg" alt="Poulet entier">
+                <div class="item-info">
+                    <div class="item-name">Poulet entier</div>
+                </div>
+                <div class="item-price">8 500 XOF</div>
+            </div>
+
+            <div class="menu-item" onclick="toggleDetails('dibi-poulet', 'dibi_poulet.jpg', 'Dibi Poulet', 'Viande de poulet grillée au feu de bois', 7500)">
+                <img src="dibi_poulet.jpg" alt="Dibi Poulet">
+                <div class="item-info">
+                    <div class="item-name">Dibi Poulet</div>
+                    <div>Viande de poulet grillée au feu de bois</div>
+                </div>
+                <div class="item-price">7 500 XOF</div>
+            </div>
+
+            <div class="menu-item" onclick="toggleDetails('crevettes-sautees', 'crevettes_sautees.jpg', 'Crevettes sautées', '', 7000)">
+                <img src="crevettes_sautees.jpg" alt="Crevettes sautées">
+                <div class="item-info">
+                    <div class="item-name">Crevettes sautées</div>
+                </div>
+                <div class="item-price">7 000 XOF</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="details" id="details">
+        <span class="close-btn" onclick="hideDetails()">❌</span>
+        <img id="details-img" src="" alt="Image du plat">
+        <h3 id="details-title"></h3>
+        <p id="details-description"></p>
+        <h4 id="details-price"></h4>
+    
+        <p><strong>Garnitures <span class="text-muted">(Obligatoire)</span></strong></p>
+        <div class="border p-2 mb-2">
+            <div class="form-check"><input class="form-check-input" type="checkbox"><label class="form-check-label">Riz blanc</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox"><label class="form-check-label">Frites</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox"><label class="form-check-label">Banane plantain</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox"><label class="form-check-label">Attiéké</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox"><label class="form-check-label">Haricots verts</label></div>
+        </div>
+    
+        <p><strong>Garniture supplémentaire <span class="text-muted">(+1 000 F CFA chacune)</span></strong></p>
+        <div class="border p-2 mb-2">
+            <div class="form-check"><input class="form-check-input" type="checkbox"><label class="form-check-label">Riz blanc</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox"><label class="form-check-label">Frites</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox"><label class="form-check-label">Banane plantain</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox"><label class="form-check-label">Attiéké</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox"><label class="form-check-label">Haricots verts</label></div>
+        </div>
+    
+        <p><strong>Instructions spéciales</strong></p>
+        <textarea class="form-control" placeholder="Exemple : Pas de poivre/sucre/sel s'il vous plaît."></textarea>
+    
+        <p><strong>Quantité</strong></p>
+        <div class="input-group mb-3">
+            <button class="btn btn-outline-secondary btn-quantity" onclick="document.getElementById('quantity').stepDown(); updatePrice();">-</button>
+            <input type="number" class="form-control text-center" id="quantity" value="1" min="1" oninput="updatePrice();">
+            <button class="btn btn-outline-secondary btn-quantity" onclick="document.getElementById('quantity').stepUp(); updatePrice();">+</button>
+        </div>
+    
+        <!-- Cadre jaune avec prix et bouton "Ajouter au panier" -->
+        <div class="price-container">
+            <span class="total-price" id="total-price">7 500 F CFA</span>
+            <button class="btn btn-warning">Ajouter au panier</button>
+        </div>
+    </div>
+    
+    <script>
+        let currentItem = null;
+    
+        function toggleDetails(id, imgSrc, title, description, price) {
+            const details = document.getElementById('details');
+    
+            if (currentItem === id) {
+                hideDetails();
+                return;
+            }
+    
+            document.getElementById('details-img').src = imgSrc;
+            document.getElementById('details-title').textContent = title;
+            document.getElementById('details-description').textContent = description || "Délicieux plat à savourer.";
+            document.getElementById('details-price').textContent = price + " XOF";
+    
+            details.style.display = 'block';
+            currentItem = id;
+        }
+    
+        function hideDetails() {
+            document.getElementById('details').style.display = 'none';
+            currentItem = null;
+        }
+    
+        function updatePrice() {
+            let quantity = document.getElementById("quantity").value;
+            let total = 7500 * quantity;
+            document.getElementById("total-price").innerText = total + " F CFA";
+        }
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>  
