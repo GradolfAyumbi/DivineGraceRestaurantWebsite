@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/styles/cart.css">
+</head>
+<body>
+    
+    <!-- CART SECTION START-->
+    <div id="cart-container">
+        <div id="cart">
+          <h2>Votre Panier</h2>
+          <ul id="cart-items"></ul>
+          <div id="total">
+            <p>Total : <span id="total-price">0,00€</span></p>
+            <button id="checkout-btn">Commander</button>
+          </div>
+        </div>
+    </div>
+    
+    <script>
+        let cart = [
+        { name: "Salade César", price: 5.99 },
+        { name: "Steak Frites", price: 12.99 }
+      ];
+      
+      const cartItems = document.querySelector("#cart-items");
+      const checkoutButton = document.querySelector("#checkout-btn");
+      const totalPriceDisplay = document.querySelector("#total-price");
+      
+      function updateCart() {
+        cartItems.innerHTML = "";
+        let total = 0;
+        
+        cart.forEach(item => {
+          const li = document.createElement("li");
+          li.classList.add("cart-item");
+          
+          const itemName = document.createElement("span");
+          itemName.classList.add("item-name");
+          itemName.textContent = item.name;
+          
+          const itemPrice = document.createElement("span");
+          itemPrice.classList.add("item-price");
+          itemPrice.textContent = `${item.price.toFixed(2)}€`;
+          
+          const removeButton = document.createElement("button");
+          removeButton.classList.add("remove-item");
+          removeButton.textContent = "Retirer";
+          removeButton.onclick = () => {
+            cart = cart.filter(cartItem => cartItem.name !== item.name);
+            updateCart();
+          };
+          
+          li.appendChild(itemName);
+          li.appendChild(itemPrice);
+          li.appendChild(removeButton);
+          cartItems.appendChild(li);
+          
+          total += item.price;
+        });
+        
+        totalPriceDisplay.textContent = `${total.toFixed(2)}€`;
+      }
+      
+      checkoutButton.addEventListener("click", () => {
+        alert("Merci pour votre commande !");
+      });
+      
+      updateCart();
+      
+    </script>
+     <!-- CART SECTION END--> 
+
+</body>
+</html>
