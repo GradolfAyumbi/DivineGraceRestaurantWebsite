@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Reservation</title>
+    <link rel="stylesheet" href="../assets/styles/table-reservation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="Nkwesi-super-container">
+        <!-- Top Rectangle -->
+        <div class="Nkwesi-rectangle Nkwesi-top-rectangle">
+            <span class="Nkwesi-top-text">TERAL</span> 
+        </div>
+
+        <div class="Nkwesi-modal-container">
+            <div class="Nkwesi-modal">
+                <section class="Nkwesi-reservation">
+                    <h2>TABLE RESERVATION</h2>
+                    <form>
+                        <div class="Nkwesi-form-group">
+                            <div class="Nkwesi-input-wrapper">
+                                <div class="Nkwesi-icon-box">
+                                    <i class="fas fa-users Nkwesi-icon"></i>
+                                </div>
+                                <select id="Nkwesi-numberOfPeople" name="numberOfPeople" required>
+                                    <option value="" disabled selected>Select number of people</option>
+                                    <option value="1">1 Person</option>
+                                    <option value="2">2 Persons</option>
+                                    <option value="3">3 Persons</option>
+                                    <option value="4">4 Persons</option>
+                                    <option value="5">5 Persons</option>
+                                    <option value="6">6 Persons</option>
+                                    <option value="7">7 Persons</option>
+                                    <option value="8">8 Persons</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="Nkwesi-form-group">
+                            <div class="Nkwesi-input-wrapper">
+                                <div class="Nkwesi-icon-box">
+                                    <i class="fas fa-calendar-alt Nkwesi-icon"></i>
+                                </div>
+                                <select id="Nkwesi-date" name="date" required>
+                                    <option value="" disabled selected>Select date</option>
+                                    <option value="today">Today</option>
+                                    <option value="tomorrow">Tomorrow</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="Nkwesi-form-group">
+                            <div class="Nkwesi-input-wrapper">
+                                <div class="Nkwesi-icon-box">
+                                    <i class="fas fa-clock Nkwesi-icon"></i>
+                                </div>
+                                <select id="Nkwesi-time" name="time" required>
+                                    <option value="" disabled selected>Select time</option>
+                                    <option value="12:00">12:00 PM</option>
+                                    <option value="13:00">1:00 PM</option>
+                                    <option value="14:00">2:00 PM</option>
+                                    <option value="18:00">6:00 PM</option>
+                                    <option value="19:00">7:00 PM</option>
+                                    <option value="20:00">8:00 PM</option>
+                                    <option value="21:00">9:00 PM</option>
+                                    <option value="12:00">10:00 PM</option>
+                                    <option value="13:00">11:00 PM</option>
+                                    <option value="14:00">1:00 AM</option>
+                                    <option value="18:00">2:00 AM</option>
+                                    <option value="19:00">3:00 AM</option>
+                                    <option value="20:00">4:00 AM</option>
+                                    <option value="21:00">5:00 AM</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="Nkwesi-form-group">
+                            <div class="Nkwesi-input-wrapper-2">
+                                <div class="Nkwesi-icon-box-2">
+                                    <i class="fas fa-edit Nkwesi-icon"></i>
+                                </div>
+                                <textarea id="Nkwesi-comments" name="comments" rows="3" placeholder="Comments (optional)"></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+
+        <!-- Bottom Rectangle -->
+        <div class="Nkwesi-rectangle Nkwesi-bottom-rectangle">
+            <!-- Note and Next Button Section -->
+            <div class="Nkwesi-note-container">
+                <p class="Nkwesi-note">Table is kept for 30 minutes after reservation time.<br>We appreciate you being on time.</p>
+                <button type="submit" class="Nkwesi-next-button">Next</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
