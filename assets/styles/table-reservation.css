@@ -1,4 +1,4 @@
- /* THE FOLLOWING CODE BELONGS TO LENGONO ELOUNDOU MARIETTE  */
+/* THE FOLLOWING CODE BELONGS TO LENGONO ELOUNDOU MARIETTE  */
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f8f8;
@@ -129,3 +129,235 @@ p {
 }
 
 /* THE CODE BELONGING TO LENGONO ELOUNDOU MARIETTE ENDS HERE */
+
+@import url('./main.css');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.Nkwesi-super-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 815px;
+    min-height: auto;
+    border-radius: 20px;
+    background-color: #fff;
+    background-image: url(https://images.unsplash.com/photo-1523821741446-edb2b68bb7a0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Ymx1cnxlbnwwfHwwfHx8MA%3D%3D);
+    box-shadow: 0 0 15px rgba(109, 105, 105, 0.2);
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.Nkwesi-rectangle.Nkwesi-top-rectangle {
+    width: 100%;
+    height: 65px;
+    background-color: #ccc;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.Nkwesi-top-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.Nkwesi-rectangle.Nkwesi-bottom-rectangle {
+    width: 100%;
+    height: 90px;
+    background-color: #ccc;
+    border-radius: 0 0 8px 8px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    overflow: hidden;
+}
+
+.Nkwesi-note-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.Nkwesi-note {
+    font-size: 18px;
+    color: #777;
+    white-space: normal;
+    overflow: hidden;
+    word-break: break-word;
+    line-height: 1.4;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.Nkwesi-next-button {
+    padding: 12px 170px;
+    background-color: var(--orange);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    width: auto;
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    margin-left: auto; 
+    border-radius: 8px;
+}
+
+.Nkwesi-modal-container {
+    width: 100%;
+    max-width: 430px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.Nkwesi-reservation h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.Nkwesi-form-group {
+    margin-bottom: 15px;
+}
+
+.Nkwesi-input-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    height: 40px;
+}
+
+.Nkwesi-input-wrapper-2 {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    height: 100%;
+}
+
+.Nkwesi-icon-box {
+    width: 40px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e0e0e0;
+    border-right: 1px solid #ccc;
+}
+
+.Nkwesi-icon-box-2 {
+    width: 40px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e0e0e0;
+    border-right: 1px solid #ccc;
+}
+
+.Nkwesi-icon {
+    color: #555;
+    font-size: 1.2rem;
+}
+
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    flex-grow: 1;
+    height: 100%;
+}
+
+select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+}
+
+textarea {
+    resize: vertical;
+    background-color: #f9f9f9;
+}
+
+@media (max-width: 768px) {
+    .Nkwesi-super-container {
+        width: 90%;
+    }
+
+    .Nkwesi-next-button {
+        padding: 12px 15px;
+    }
+
+    .Nkwesi-note {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Nkwesi-super-container {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .Nkwesi-rectangle.Nkwesi-top-rectangle, .Nkwesi-rectangle.Nkwesi-bottom-rectangle {
+        border-radius: 0;
+    }
+
+    .Nkwesi-next-button {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    .Nkwesi-note {
+        font-size: 14px;
+    }
+}

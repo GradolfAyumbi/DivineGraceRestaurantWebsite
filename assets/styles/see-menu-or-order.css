@@ -1,0 +1,107 @@
+body {
+    font-family: var(--font-family, sans-serif); /* Fallback to sans-serif */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Keeps the background color from master */
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    background-color: #f0f0f0;
+    padding: 15px;
+    text-align: left;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.image-container img {
+    width: auto;
+    height: auto;
+    display: block;
+}
+
+.menu-items {
+    padding: 20px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.item-name {
+    color: #333;
+}
+
+.item-price {
+    color: #555;
+}
+
+#jb-entrees {
+    cursor: pointer;
+}
+
+#jb-dropdown {
+    font-size: var(--p-font-size-large);
+    background: var(--grey);
+}
+
+#jb-dropdown img {
+    transform: rotate(180deg);
+}
+
+.jb-item {
+    border-top: 1px solid var(--black);
+    border-bottom: 1px solid var(--black);
+}
+
+.jb-dropdown, .jb-item {
+    transition: background .3s;
+}
+
+.jb-item:hover {
+    background: var(--grey);
+}
+
+.jb-info {
+    flex-direction: column;
+    padding-left: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    #jb-dropdown:active {
+        background: var(--black);
+    } 
+}
+
+@media only screen and (min-width: 768px) {
+    #jb-dropdown {
+        background: none;
+        font-size: var(--h-font-size-small);
+    }
+
+    #jb-dropdown img {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    #jb-entrees {
+        border: 1px solid var(--grey);
+    }
+}

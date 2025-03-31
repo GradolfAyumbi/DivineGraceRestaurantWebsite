@@ -1,0 +1,56 @@
+body {
+    background-color: #4C1C14; /* Dark brown background */
+    color: #FFFFFF; /* White text */
+    font-family: 'Arial', sans-serif;
+}
+
+h1, h2 {
+    color: #FFFFFF;
+}
+
+.custom-hr {
+    width: 50px;
+    border: 2px solid #D47C4A; /* Light orange accent */
+    margin-bottom: 20px;
+}
+
+/* Ensure proper alignment */
+.text-justify {
+    text-align: justify;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.text-start {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.list-unstyled {
+    padding-left: 0;
+}
+
+.list-unstyled li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* Colored dots */
+.dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Colors for each zone */
+.blue { background-color: #5DADEC; }
+.orange { background-color: #FF8C42; }
+.yellow { background-color: #FFD700; }
+.dark-orange { background-color: #FF6F00; }
+.purple { background-color: #8A2BE2; }
+.brown { background-color: #D2691E; }
