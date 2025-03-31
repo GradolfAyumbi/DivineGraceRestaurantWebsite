@@ -1,8 +1,8 @@
 body {
-    font-family: sans-serif;
-    margin: 0; 
+    font-family: var(--font-family, sans-serif); /* Fallback to sans-serif */
+    margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4; /* Keeps the background color from master */
 }
 
 .container {
@@ -30,8 +30,7 @@ body {
 .image-container img {
     width: auto;
     height: auto;
-   display: block;
-    
+    display: block;
 }
 
 .menu-items {
@@ -53,3 +52,56 @@ body {
     color: #555;
 }
 
+#jb-entrees {
+    cursor: pointer;
+}
+
+#jb-dropdown {
+    font-size: var(--p-font-size-large);
+    background: var(--grey);
+}
+
+#jb-dropdown img {
+    transform: rotate(180deg);
+}
+
+.jb-item {
+    border-top: 1px solid var(--black);
+    border-bottom: 1px solid var(--black);
+}
+
+.jb-dropdown, .jb-item {
+    transition: background .3s;
+}
+
+.jb-item:hover {
+    background: var(--grey);
+}
+
+.jb-info {
+    flex-direction: column;
+    padding-left: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    #jb-dropdown:active {
+        background: var(--black);
+    } 
+}
+
+@media only screen and (min-width: 768px) {
+    #jb-dropdown {
+        background: none;
+        font-size: var(--h-font-size-small);
+    }
+
+    #jb-dropdown img {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    #jb-entrees {
+        border: 1px solid var(--grey);
+    }
+}
