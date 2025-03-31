@@ -1,3 +1,336 @@
+/*Yvan's code starts here*/
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #580000;
+    color: white;
+  }
+
+  /* Footer styles */
+  footer {
+    padding: 50px 50px 32px;
+  }
+
+  /* Footer container styles */
+  .footer-container {
+    background-color: #580000;
+    padding: 40px 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .footer-column {
+    flex: 1;
+    margin: 10px;
+    min-width: 250px;
+  }
+
+  .footer-column:first-child {
+    margin-top: 18px;
+  }
+
+  .footer-container h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    display: inline-block;
+    padding-bottom: 5px;
+    text-decoration: none;
+  }
+
+  .footer-container a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+    opacity: 0.6;
+    font-weight: 600;
+  }
+
+
+  .footer-container a:hover {
+    text-decoration: none;
+    opacity: 1;
+    color: white;
+  }
+
+  .links-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px 50px;
+    max-width: 300px;
+  }
+
+  .links-container a {
+    white-space: nowrap;
+    text-align: left;
+  }
+
+  .footer-column:first-child {
+    margin-top: 18px;
+  }
+
+  /* Language selector styles */
+  .footer-language-selector select {
+    width: 100%;
+    min-width: 220px;
+    background-color: transparent;
+    padding: 5px 43px 5px 33px;
+    border-radius: 3px;
+    border: solid 1px rgba(255, 255, 255, 0.5);
+    color: transparent;
+    opacity: .6;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 18px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    outline: 0;
+  }
+
+  .language-selector {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: solid 1px rgba(255, 255, 255, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 210px;
+    gap: 8px;
+  }
+
+  .language-selector i {
+    color: #bbb;
+    font-size: 14px;
+  }
+
+  .hidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  .language-selector select option {
+    background-color: rgba(42, 0, 0, 0.9);
+    color: white;
+  }
+
+  .language-selector select:focus {
+    background-color: transparent;
+    outline: none;
+  }
+
+  /* Policy links styles */
+  .policy-links {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  .policy-links div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .policy-links a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .policy-links a:hover {
+    color: white;
+  }
+
+  /* Contact info styles */
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-info p {
+    color: #bbbbbb;
+    font-size: 14px;
+    margin: 4px 0;
+    display: flex;
+    align-items: flex-start;
+    font-weight: 600;
+    opacity: 0.6;
+  }
+
+  .icon {
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-right: 8px;
+  }
+
+  .address {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    font-weight: 600;
+    color: white;
+    opacity: 0.8;
+  }
+
+  .contact-info i {
+    opacity: 0.6;
+    font-size: 16px;
+  }
+
+
+  /* Buttons styles */
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    padding: 9px 5px;
+  }
+
+  .buttons a {
+    background-color: #d86b30;
+    padding: 10px 15px;
+    width: 200px;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+    margin: 0 0 20px 10px;
+  }
+
+  .buttons a:hover {
+    filter: brightness(1.2);
+  }
+
+
+  .buttons a:first-child {
+    background-color: #007acc;
+  }
+
+  /* Footer bottom styles */
+  .footer-bottom {
+    max-width: 74%;
+    text-align: center;
+    padding: 40px 10%;
+    margin-top: -5%;
+    background-color: #580000;
+    font-size: 14px;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .footer-links a {
+    color: lightgray;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    opacity: 0.5;
+  }
+
+  .footer-links a:hover {
+    text-decoration: none;
+    color: white;
+  }
+
+  .footer-column select {
+    width: 100%;
+    display: block;
+    background-color: transparent;
+    color: #ffffff;
+    opacity: 0.7;
+    padding: 5px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .footer-extra-links {
+    text-align: justify;
+    padding: 0;
+    margin: 30px auto;
+  }
+
+  .footer-extra-links li {
+    display: inline;
+    padding: 0;
+    text-align: left;
+    line-height: 25px;
+  }
+
+  .footer-partner>a {
+    opacity: .4;
+    -webkit-transition: opacity .3s ease-out;
+    transition: opacity .3s ease-out;
+    text-decoration: none;
+    color: #fff;
+    height: 32px;
+    display: inline-block;
+  }
+
+ /* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      gap: 20px;
+  }
+
+  .footer-column {
+      width: 100%;
+      text-align: center;
+  }
+
+  .footer-container h3 {
+      font-size: 22px; /* Augmenté pour une meilleure lisibilité */
+  }
+
+  .footer-container a {
+      font-size: 18px; /* Augmenté pour les liens */
+  }
+
+  .links-container a {
+      font-size: 18px;
+  }
+
+  .contact-info p {
+      font-size: 18px; /* Augmenté pour les infos de contact */
+  }
+
+  .policy-links {
+      font-size: 16px; /* Augmenté pour les liens de politique */
+  }
+
+  .buttons a {
+      font-size: 20px; /* Boutons plus lisibles */
+  }
+
+  .footer-bottom {
+      font-size: 16px; /* Texte du bas légèrement plus grand */
+  }
+}
+/*Yvan's code ends here*/
+
 * {
     margin: 0;
     padding: 0;
